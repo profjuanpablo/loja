@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+ 
+    RewriteEngine On
+ 
+ 
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+ 
+ 
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	 
+	RewriteCond $1 !^(index\.php|images|robots\.txt|css)
+	RewriteRule ^(.*)$ index.php?url=$1
+</IfModule>

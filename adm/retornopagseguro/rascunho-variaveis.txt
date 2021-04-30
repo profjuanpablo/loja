@@ -1,0 +1,67 @@
+<?php
+include_once("../conexao/conexao.php");
+
+	function MoedaBR($valor) {
+		$valor = str_replace('.','',$valor);
+		$valor = str_replace(',','.',$valor);
+		return $valor;
+	}
+	
+$transacao_cod = '5615615615616';
+$data_transacao = '15/07/2016 10:20:35';
+$data_transacao = implode('-', explode('/', $data_transacao));
+$tipo_pagamento = 'Cartão de Crédito';
+$status_transacao = 'Aguardando Pagto';
+$nome = 'Cesar Szpak';
+$email = 'celkeadm@gmail.com';
+$endereco = 'Av. Republica Argentina';
+$numero = '5550';
+$complemento = '';
+$bairro = 'Capão Raso';
+$cidade = 'Curitiba';
+$uf = 'PR';
+$cep = '81050001';
+$produto_id = '2';
+$preco = '49.00';
+$usuario_id = '3';
+
+	
+$preco = MoedaBR($preco);
+$data_transacao = date('Y-m-d H:i:s', strtotime($data_transacao));
+
+		$result_transacoes = "INSERT INTO transacoes (
+			transacao_cod,
+			data_transacao,
+			tipo_pagamento,
+			status_transacao,
+			nome,
+			email, 
+			endereco,
+			numero,
+			complemento,
+			bairro,
+			cidade,
+			uf,
+			cep,
+			produto_id,
+			preco,
+			usuario_id,
+			created) VALUES (
+			'$transacao_cod',
+			'$data_transacao',
+			'$tipo_pagamento',
+			'$status_transacao',
+			'$nome',
+			'$email',
+			'$endereco',
+			'$numero',
+			'$complemento',
+			'$bairro',
+			'$cidade',
+			'$uf',
+			'$cep',
+			'$produto_id',
+			'$preco',
+			'$usuario_id',
+			NOW())";
+		$resultado_transacoes = mysqli_query($conn, $result_transacoes);

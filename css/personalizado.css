@@ -1,0 +1,61 @@
+.espaco-topo{
+	margin-top: 51px;
+	color: #fff;
+}
+
+.espaco-servicos{
+	margin-top: 55px;
+}
+
+.espaco-artigo{
+	margin-top: 55px;
+	background-color: #f1f1f4;
+}
+
+.espaco-artigo-titulo{
+	text-align: center;
+	margin-top: 55px;
+	margin-bottom: 55px;
+}
+
+.espaco-inscreva{
+	text-align: center;	
+	margin-top: 55px;
+	margin-bottom: 55px;
+}
+.espaco-inscreva p{
+	font-size: 23px;
+	margin-bottom: 20px;
+}
+
+.espaco-rodape{
+	background-color: #334d5c;
+	color: #fff;
+}
+
+.espaco-contato{
+	margin-top: 51px;
+}
+.pag-servicos{
+	margin-top: 51px;
+	margin-bottom: 51px;
+}
+.pag-blog{
+	margin-top: 101px;
+	margin-bottom: 51px;
+}
+
+.pag-blog{	
+	margin-top: 101px;
+	margin-bottom: 51px;
+}
+
+.espaco-cad-email{
+	margin-top: 55px;
+	margin-bottom: 155px;
+	padding-top: 85px;
+	padding-bottom: 85px;
+	background-color: #334d5c;
+	color: #fff;
+}
+
